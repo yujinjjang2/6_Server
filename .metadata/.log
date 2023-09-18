@@ -10125,3 +10125,154 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2023-09-18 09:10:10.256
 !MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wst.sse.core 4 4 2023-09-18 10:08:48.679
+!MESSAGE can not get a buffer without a document reference
+!STACK 0
+java.lang.IllegalArgumentException: can not get a buffer without a document reference
+	at org.eclipse.wst.sse.core.internal.FileBufferModelManager.getBuffer(FileBufferModelManager.java:691)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.getModelPath(JSPTranslator.java:3310)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.writeExternal(JSPTranslator.java:3418)
+	at java.base/java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1465)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1436)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1181)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:350)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslatorPersister.persistTranslator(JSPTranslatorPersister.java:265)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslatorPersister.persistTranslation(JSPTranslatorPersister.java:149)
+	at org.eclipse.jst.jsp.core.internal.java.search.JSPIndexManager.performAction(JSPIndexManager.java:139)
+	at org.eclipse.wst.sse.core.indexing.AbstractIndexManager$ResourceEventProcessingJob$1.run(AbstractIndexManager.java:1569)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.wst.sse.core.indexing.AbstractIndexManager$ResourceEventProcessingJob.run(AbstractIndexManager.java:1567)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:17:09.921
+!MESSAGE Could not publish server configuration for Servlet Server.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:17:09.921
+!MESSAGE Multiple Contexts have a path of "/".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:17:38.193
+!MESSAGE Could not publish server configuration for Servlet Server.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:17:38.193
+!MESSAGE Multiple Contexts have a path of "/".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:17:47.283
+!MESSAGE Could not publish server configuration for Servlet Server.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:17:47.283
+!MESSAGE Multiple Contexts have a path of "/".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:17:57.564
+!MESSAGE Could not publish server configuration for Servlet Server.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:17:57.564
+!MESSAGE Multiple Contexts have a path of "/".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:23:30.322
+!MESSAGE Could not publish server configuration for Servlet Server.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:23:30.322
+!MESSAGE Multiple Contexts have a path of "/".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:23:33.037
+!MESSAGE Could not publish server configuration for Servlet Server.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:23:33.037
+!MESSAGE Multiple Contexts have a path of "/".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:23:33.388
+!MESSAGE Could not publish server configuration for Servlet Server.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:23:33.388
+!MESSAGE Multiple Contexts have a path of "/".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:23:59.885
+!MESSAGE Could not publish server configuration for Servlet Server.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:23:59.885
+!MESSAGE Multiple Contexts have a path of "/".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:24:08.786
+!MESSAGE Could not publish server configuration for Servlet Server.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:24:08.786
+!MESSAGE Multiple Contexts have a path of "/".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:24:22.456
+!MESSAGE Could not publish server configuration for Servlet Server.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:24:22.456
+!MESSAGE Multiple Contexts have a path of "/".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:24:58.374
+!MESSAGE Could not publish server configuration for Servlet Server.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:24:58.374
+!MESSAGE Multiple Contexts have a path of "/".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:25:08.490
+!MESSAGE Could not publish server configuration for Servlet Server.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:25:08.491
+!MESSAGE Multiple Contexts have a path of "/".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:26:02.603
+!MESSAGE Could not publish server configuration for Servlet Server.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:26:02.603
+!MESSAGE Multiple Contexts have a path of "/".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:26:49.840
+!MESSAGE Could not publish server configuration for Servlet Server.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:26:49.840
+!MESSAGE Multiple Contexts have a path of "/".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:27:33.146
+!MESSAGE Could not publish server configuration for Servlet Server.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:27:33.146
+!MESSAGE Multiple Contexts have a path of "/".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:27:49.101
+!MESSAGE Could not publish server configuration for Servlet Server.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:27:49.101
+!MESSAGE Multiple Contexts have a path of "/".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:28:00.680
+!MESSAGE Could not publish server configuration for Servlet Server.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:28:00.680
+!MESSAGE Multiple Contexts have a path of "/".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:28:11.780
+!MESSAGE Could not publish server configuration for Servlet Server.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:28:11.780
+!MESSAGE Multiple Contexts have a path of "/".
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2023-09-18 10:31:10.652
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2023-09-18 10:31:10.653
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2023-09-18 10:31:10.653
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2023-09-18 10:31:10.653
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2023-09-18 10:31:10.656
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2023-09-18 10:31:10.658
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:36:59.713
+!MESSAGE Could not publish server configuration for Servlet Server.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2023-09-18 10:36:59.713
+!MESSAGE Multiple Contexts have a path of "/".
+
+!ENTRY org.eclipse.wst.sse.core 4 4 2023-09-18 10:46:24.623
+!MESSAGE can not get a buffer without a document reference
+!STACK 0
+java.lang.IllegalArgumentException: can not get a buffer without a document reference
+	at org.eclipse.wst.sse.core.internal.FileBufferModelManager.getBuffer(FileBufferModelManager.java:691)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.getModelPath(JSPTranslator.java:3310)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.writeExternal(JSPTranslator.java:3418)
+	at java.base/java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1465)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1436)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1181)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:350)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslatorPersister.persistTranslator(JSPTranslatorPersister.java:265)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslatorPersister.persistTranslation(JSPTranslatorPersister.java:149)
+	at org.eclipse.jst.jsp.core.internal.java.search.JSPIndexManager.performAction(JSPIndexManager.java:139)
+	at org.eclipse.wst.sse.core.indexing.AbstractIndexManager$ResourceEventProcessingJob$1.run(AbstractIndexManager.java:1569)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.wst.sse.core.indexing.AbstractIndexManager$ResourceEventProcessingJob.run(AbstractIndexManager.java:1567)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
