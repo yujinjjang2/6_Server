@@ -21,7 +21,7 @@ public class StudentDAO {
 	
 	private Properties prop;
 	
-	// 기본 생성자로 객체가 생성될 때
+	// 기본 생성장로 객체가 생성될 때
 	// sql이 작성된 xml 파일 읽어와 prop에 저장
 	public StudentDAO() {
 		try {
@@ -54,7 +54,7 @@ public class StudentDAO {
 			// 4. sql 수행 후 결과(ResultSet) 반환받기
 			rs = stmt.executeQuery(sql);
 			
-			// 5. ResultSet 1행씩 접근하면서 List에 옯겨 담기
+			// 5. ResultSet 1행씩 접근하면서 List에 옮겨 담기
 			while(rs.next()) {
 				
 				String studentNo = rs.getString("STUDENT_NO");
@@ -62,7 +62,7 @@ public class StudentDAO {
 				String studentAddress = rs.getString("STUDENT_ADDRESS");
 				String departmentName = rs.getString("DEPARTMENT_NAME");
 				
-				Student student
+				Student student 
 					= new Student(studentNo, studentName, studentAddress, departmentName);
 				
 				stdList.add(student);
@@ -82,12 +82,11 @@ public class StudentDAO {
 	}
 
 	public List<Student> selectArch(Connection conn) throws Exception{
-		
 		// 1. 결과 저장용 변수 선언
 		List<Student> stdList = new ArrayList<Student>();
-		
+				
 		try {
-			
+					
 			// 2. sql 작성
 			String sql = prop.getProperty("selectArch");
 			
@@ -97,7 +96,7 @@ public class StudentDAO {
 			// 4. sql 수행 후 결과(ResultSet) 반환받기
 			rs = stmt.executeQuery(sql);
 			
-			// 5. ResultSet 1행씩 접근하면서 List에 옯겨 담기
+			// 5. ResultSet 1행씩 접근하면서 List에 옮겨 담기
 			while(rs.next()) {
 				
 				String studentNo = rs.getString("STUDENT_NO");
@@ -105,7 +104,7 @@ public class StudentDAO {
 				String studentAddress = rs.getString("STUDENT_ADDRESS");
 				String departmentName = rs.getString("DEPARTMENT_NAME");
 				
-				Student student
+				Student student 
 					= new Student(studentNo, studentName, studentAddress, departmentName);
 				
 				stdList.add(student);
@@ -124,6 +123,62 @@ public class StudentDAO {
 		return stdList;
 	}
 
+	public List<Student> selectOne(Connection conn, String deptName) throws Exception{
+		// 1. 결과 저장용 변수 선언
+		List<Student> stdList = new ArrayList<Student>();
+				
+		try {
+					
+			// 2. sql 작성
+			String sql = prop.getProperty("selectOne");
+			
+			// 3. PreparedStatement 객체 생성
+			pstmt = conn.prepareStatement(sql);
+			
+			// 3-1. 가져온 deptName(학과이름) placeholder 세팅
+			pstmt.setString(1, deptName);
+			
+			// 4. sql 수행 후 결과(ResultSet) 반환받기
+			rs = pstmt.executeQuery();
+			
+			// 5. ResultSet 1행씩 접근하면서 List에 옮겨 담기
+			while(rs.next()) {
+				
+				String studentNo = rs.getString("STUDENT_NO");
+				String studentName = rs.getString("STUDENT_NAME");
+				String studentAddress = rs.getString("STUDENT_ADDRESS");
+				String departmentName = rs.getString("DEPARTMENT_NAME");
+				
+				Student student 
+					= new Student(studentNo, studentName, studentAddress, departmentName);
+				
+				stdList.add(student);
+				
+			}
+			
+			
+			
+		} finally {
+			// 6. 사용한 JDBC 객체 자원 반환
+			JDBCTemplate.close(rs);
+			JDBCTemplate.close(pstmt);
+		}
+		
+		// 7. 결과 반환
+		return stdList;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }

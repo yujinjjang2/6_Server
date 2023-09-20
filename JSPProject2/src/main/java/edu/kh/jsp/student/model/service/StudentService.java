@@ -33,6 +33,7 @@ public class StudentService {
 
 
 	public List<Student> selectArch() throws Exception{
+		// 1. Connection 생성
 		Connection conn = getConnection();
 		
 		// 2. DAO 호출
@@ -46,8 +47,22 @@ public class StudentService {
 		// 5. 결과 반환
 		return stdList;
 	}
-	
-	
 
+
+	public List<Student> selectOne(String deptName) throws Exception{
+		// 1. Connection 생성
+		Connection conn = getConnection();
+		
+		// 2. DAO 호출
+		List<Student> stdList = dao.selectOne(conn, deptName);
+		
+		// 3. 트랜제어 select 필요 없음
+		
+		// 4. Connection 반환
+		close(conn);
+		
+		// 5. 결과 반환
+		return stdList;
+	}	
 
 }

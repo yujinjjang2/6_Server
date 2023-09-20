@@ -1,25 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> <!-- c : core의 준말 -->
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     
-<%--
-	
-	<%@ %> : 지시자 태그
-	
-	taglib : 태그 라이브러리 추가
-	
-	prefix : 접두사, 태그명 앞에 작성되는 단어  <c:if>
-	
-	uri(Uniform Resource Identifier , 통합 자원 식별자)
-		-> 자원을 식별하는 고유 문자열 (ID)
-		
-	(참고) url(Uniform Resource Locator)
-		-> 자원의 위치를 나타내는 문자열(경로)
- --%>
-  
-  
-  
+ <%-- 
+ 	
+ 	<%@ %> : 지시자 태그
+ 	
+ 	taglib : 태그 라이브러리 추가
+ 	
+ 	prefix : 접두사, 태그명 앞에 작성되는 단어  <c:if>
+ 	
+ 	uri(Uniform Resource Identifier , 통합 자원 식별자)
+ 		-> 자원을 식별하는 고유 문자열 (ID)
+ 		
+ 	(참고) url(Uniform Resource Locator) 
+ 		-> 자원의 위치를 나타내는 문자열(경로)
+ --%>  
+    
+    
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,34 +28,34 @@
 </head>
 <body>
 	
-	<!-- 상대경로 : 현재 경로가 중요함! 
+	<!--  상대경로 : 현재 경로가 중요함! 
 	
 		현재 경로 : localhost:8080/jstl/main
 		목표 경로 : localhost:8080/jstl/condition
-	-->
+	 -->
 	
 	<a href="condition">JSTL을 이용한 조건문(if / choose, when, otherwise)</a>
 	
 	<br>
-	<!-- 상대경로 : 현재 경로가 중요함! 
+	<!--  상대경로 : 현재 경로가 중요함! 
 	
 		현재 경로 : localhost:8080/jstl/main
 		목표 경로 : localhost:8080/jstl/loop
-	-->
+	 -->
 	<a href="loop">JSTL을 이용한 반복문</a>
 	<br>
-	
-	
+
+
 	<a href="student/selectAll">workbook에서 학생 전체 조회하기</a> <br>
-	
-	
-	<%--
-		건축공학과인 학생만 찾아라
+
+
+	<%-- 
+		건축공학과인 학생만 찾아라 
 		student/selectArch
 		selectArch.jsp
 	--%>
-	
-	<a href="student/selectArch">건축공학과인 학생만 조회하기</a> <br>
+
+	<a href="student/selectArch">workbook에서 학생 전체 조회하기</a> <br>
 	
 	<%--
 		학과 입력을 받아 학생 찾기
@@ -65,9 +65,8 @@
 		<input type="text" name="deptName">
 		<button>찾기</button>
 	</form>
-
-
-
+	
+	
 	
 	<h1>JSTL(Jsp Standard Tag Library, JSP 표준 태그 라이브러리)</h1>
 	
@@ -83,6 +82,7 @@
 	<h3>JSTL 라이브러리 등록 방법</h3>
 	
 	<ol>
+	
 		<li>
 			<a href="https://tomcat.apache.org/download-taglibs.cgi">
 				JSTL 다운로드 페이지 이동
@@ -96,7 +96,7 @@
 		
 		<li>
 			JSTL 라이브러리를 사용하고자 하는 JSP 파일 상단에
-			tablib JSP 지시자 태그를 추가
+			tablib JSP 지시자 태그를 추가 
 		</li>
 	</ol>
 	
@@ -123,9 +123,9 @@
 	<%-- JSTL로 page scope에 속성 세팅하는 방법 --%>
 	<c:set var="num2" value="20" scope="page" />
 	
-	num1 : ${num1} <%-- 10 --%>
+	num1 : ${num1}
 	<br>
-	num2 : ${num2} <%-- 20 --%>
+	num2 : ${num2}
 	
 	
 	<hr>
@@ -157,22 +157,21 @@
 	<h1>3. 변수 출력 (c:out 태그)</h1>
 	
 	<pre>
-		/${key} EL 구문 비슷함
+		\${key} EL 구문 비슷함
 		
 		- 단, escapeXml="true" (기본값) 설정 시
 			html 태그가 해석 X
 			
-		- escapeXml="false" : html 태그 해석 O
+		- escapeXml="false" : html 태그 해석 O 
 	</pre>
 	
-	<c:set var="temp" value="<h1>곧 점심시간</h1>"/>
+	<c:set var="temp" value="<h1>곧 점심시간</h1>" />
 	
 	html 태그 해석 X : <c:out value="${temp}" />
 	
 	<br>
 	
 	html 태그 해석 O : <c:out value="${temp}" escapeXml="false" />
-	
 	
 	
 	
