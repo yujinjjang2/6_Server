@@ -10,7 +10,7 @@
 	<title>JSTL 반복문</title>
 </head>
 <body>
-	<h1>6. 반복문 - for (c:forEcah 태그)</h1>
+	<h1>6. 반복문 - for (c:forEach 태그)</h1>
 	
 	<pre>
 		- 일반 for + 추가 기능
