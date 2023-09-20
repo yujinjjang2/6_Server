@@ -34,8 +34,9 @@
 		목표 경로 : localhost:8080/jstl/condition
 	 -->
 	
-	<a href="condition">JSTL을 이용한 조건문(if / choose, when, otherwise)</a>
-	
+	<!-- <a href="condition">JSTL을 이용한 조건문(if / choose, when, otherwise)</a> -->
+	<a href="/jstl/condition">JSTL을 이용한 조건문(if / choose, when, otherwise)</a>
+	 
 	<br>
 	<!--  상대경로 : 현재 경로가 중요함! 
 	
