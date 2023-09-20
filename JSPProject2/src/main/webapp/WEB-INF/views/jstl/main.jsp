@@ -28,6 +28,47 @@
 </head>
 <body>
 	
+	<!-- 상대경로 : 현재 경로가 중요함! 
+	
+		현재 경로 : localhost:8080/jstl/main
+		목표 경로 : localhost:8080/jstl/condition
+	-->
+	
+	<a href="condition">JSTL을 이용한 조건문(if / choose, when, otherwise)</a>
+	
+	<br>
+	<!-- 상대경로 : 현재 경로가 중요함! 
+	
+		현재 경로 : localhost:8080/jstl/main
+		목표 경로 : localhost:8080/jstl/loop
+	-->
+	<a href="loop">JSTL을 이용한 반복문</a>
+	<br>
+	
+	
+	<a href="student/selectAll">workbook에서 학생 전체 조회하기</a> <br>
+	
+	
+	<%--
+		건축공학과인 학생만 찾아라
+		student/selectArch
+		selectArch.jsp
+	--%>
+	
+	<a href="student/selectArch">건축공학과인 학생만 조회하기</a> <br>
+	
+	<%--
+		학과 입력을 받아 학생 찾기
+	--%>
+	
+	<form action="student/selectOne" method="post">
+		<input type="text" name="deptName">
+		<button>찾기</button>
+	</form>
+
+
+
+	
 	<h1>JSTL(Jsp Standard Tag Library, JSP 표준 태그 라이브러리)</h1>
 	
 	<pre>
