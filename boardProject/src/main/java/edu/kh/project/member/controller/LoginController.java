@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import edu.kh.project.member.model.dto.Member;
 import edu.kh.project.member.model.service.MemberService;
@@ -34,6 +35,33 @@ public class LoginController extends HttpServlet{
 			
 			
 			System.out.println(loginMember);
+			
+			
+			// Session 객체 생성
+			HttpSession session = req.getSession();
+			
+			if(loginMember != null) { // 로그인 성공
+				
+				// session에 로그인한 회원 정보를 추가
+				session.setAttribute("loginMember", loginMember);
+				
+				// session 만료 시간 지정 (초단위 지정)
+				session.setMaxInactiveInterval(5);
+				
+				
+				// forward : 요청 처리 후 자체적인 화면이 존재하여
+				//			이를 이용해서 응답
+				
+				
+				// redirect : 요청 처리 후 자체적인 화면이 없어서
+				//			화면이 있는 다른 요청을 다시 호출(요청)
+				
+				
+				resp.sendRedirect("/"); // 메인 페이지 재요청
+				
+			} else { // 실패
+				
+			}
 			
 			
 			

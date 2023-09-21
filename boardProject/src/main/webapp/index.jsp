@@ -45,7 +45,8 @@
             
             	<c:choose>
             		<%-- 로그인이 안되었을때 --%>
-            		<c:when test="${true}">
+            		<%-- EL empty : 비어있거나 null이면 true --%>
+            		<c:when test="${empty sessionScope.loginMember}">
             		
 	            		<form action="/member/login" method="post" name="login-form" id="loginFrm">
 	
