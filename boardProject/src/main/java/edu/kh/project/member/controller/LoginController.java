@@ -46,7 +46,7 @@ public class LoginController extends HttpServlet{
 				session.setAttribute("loginMember", loginMember);
 				
 				// session 만료 시간 지정 (초단위 지정)
-				session.setMaxInactiveInterval(5);
+				session.setMaxInactiveInterval(60*60);
 				
 				
 				// forward : 요청 처리 후 자체적인 화면이 존재하여
