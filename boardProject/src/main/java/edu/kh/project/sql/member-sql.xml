@@ -11,6 +11,13 @@
 		AND MEMBER_EMAIL = ?
 		AND MEMBER_PW = ?
 	</entry>
+	
+	<entry key="searchMember">
+		SELECT MEMBER_NO, MEMBER_EMAIL, MEMBER_NICKNAME, MEMBER_TEL
+		FROM "MEMBER"
+		WHERE MEMBER_DEL_FL = 'N'
+		AND MEMBER_NICKNAME LIKE '%' || ? || '%'
+	</entry>
 
 </properties>
 

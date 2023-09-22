@@ -3,6 +3,7 @@ package edu.kh.project.member.model.service;
 import static edu.kh.project.common.JDBCTemplate.*;
 
 import java.sql.Connection;
+import java.util.List;
 
 import edu.kh.project.member.model.dao.MemberDAO;
 import edu.kh.project.member.model.dto.Member;
@@ -27,5 +28,22 @@ public class MemberService {
 		
 		return loginMember;
 	}
+
+	/** 회원 검색
+	 * @param query
+	 * @return
+	 */
+	public List<Member> searchMember(String query) throws Exception{
+		
+		Connection conn = getConnection();
+		
+		List<Member> memberList = dao.searchMember(conn, query);
+		
+		close(conn);
+		
+		return memberList;
+	}
+
+	
 
 }
