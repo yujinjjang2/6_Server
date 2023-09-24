@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/* div, section {
+    border: 1px solid black;
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+body > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+}
+
+#form {
+    font-size: 13px;
+    padding: 20px;
+}
+
+#form > input {
+    margin: 10px 0px;
+}
+
+#login-btn {
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+#form > a {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+body > section > div:nth-child(2) {
+    border: 1px solid darkgray;
+    border-radius: 10px;
+}
