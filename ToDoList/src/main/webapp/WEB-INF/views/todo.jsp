@@ -48,7 +48,7 @@
 		</table>
 
 		<div>
-			<a href="/WEB-INF/views/insert.jsp"><button id="reg-btn">등록하기</button></a>
+			<a href="./insert.jsp"><button id="reg-btn">등록하기</button></a>
 			<a href="/"><button id="logout-btn">로그아웃</button></a>
 		</div>
 

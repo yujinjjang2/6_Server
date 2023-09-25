@@ -19,8 +19,10 @@ public class SignupController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		MemberService service = new MemberService();
+	
+		req.setCharacterEncoding("UTF-8");
 		
-		try {
+		try {		
 			String id = req.getParameter("id");
 			String pw = req.getParameter("pw");
 			String nm = req.getParameter("nm");

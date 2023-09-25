@@ -9,6 +9,7 @@
 <body>
 	<script>
 		alert("회원가입 완료!");
+		location.href = "/";
 	</script>
 </body>
 </html>
