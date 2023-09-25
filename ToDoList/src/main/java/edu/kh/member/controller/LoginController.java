@@ -29,9 +29,9 @@ public class LoginController extends HttpServlet {
 			
 			List<Member> member = service.selectLogin(id, pw);
 			
-//			for(Member mem : member) {
-//				System.out.println(mem);
-//			}
+			for(Member mem : member) {
+				System.out.println(mem);
+			}
 			
 			// 로그인 성공할 경우 todoList 가져오기
 			if(member.size() == 1) {

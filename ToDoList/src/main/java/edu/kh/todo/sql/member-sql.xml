@@ -11,5 +11,9 @@
 		AND MEMBER_PW = ?
 	</entry>
 	
+	<entry key="insertMember">
+		INSERT INTO MEMBER(MEMBER_NO, MEMBER_ID, MEMBER_PW, MEMBER_NICKNAME, ENROLL_DATE, MEMBER_DEL_FL)
+		VALUES (SEQ_MEMBER_NO.NEXTVAL, ?, ?, ?, DEFAULT, DEFAULT)
+	</entry>
 	
 </properties>

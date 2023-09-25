@@ -3,10 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>회원가입 성공</title>
 </head>
 <body>
-
+	<script>
+		alert("회원가입 완료!");
+	</script>
 </body>
 </html>

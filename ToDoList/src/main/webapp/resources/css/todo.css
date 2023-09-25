@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+section, div {
+    border: 1px solid black;
+}
+
+body > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+}
+
+body > section > div {
+    margin-top: 20px;
+}
+
+/* 버튼 변경 */
+#update-btn {
+    border: none;
+    background-color: blue;
+    color: white;
+    width: 50px;
+    height: 25px;
+}
+
+#delete-btn {
+    border: none;
+    background-color: red;
+    color: white;
+    width: 50px;
+    height: 25px;
+}
+
+#reg-btn {
+    border: none;
+    background-color: green;
+    color: white;
+    width: 70px;
+    height: 30px;
+}
+
+#logout-btn {
+    border: none;
+    background-color: black;
+    color: white;
+    width: 70px;
+    height: 30px;
+}

@@ -12,7 +12,7 @@
 	<!-- <entry key="url">jdbc:oracle:thin:@115.90.212.22:10000:XE</entry>  -->
 	
 	<!-- project 계정 -->
-	<entry key="user">todolist</entry>
-	<entry key="pw">todolist</entry>
+	<entry key="user">todoList</entry>
+	<entry key="pw">todoList1234</entry>
 	
 </properties>

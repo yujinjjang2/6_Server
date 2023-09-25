@@ -70,22 +70,28 @@ public class MemberDAO {
 		return member;
 	}
 
-	public List<Todo> selectTodo(Connection conn, int memNo) throws Exception{
+	public int insertMember(Connection conn, String id, String pw, String nm) throws Exception{
 		
-		List<Todo> todo = new ArrayList<Todo>();
+		int result = 0;
 		
 		try {
 			
-			String sql = prop.getProperty("selectTodo");
+			String sql = prop.getProperty("insertMember");
+			
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, id);
+			pstmt.setString(2, pw);
+			pstmt.setString(3, nm);
+			
+			result = pstmt.executeUpdate();
 			
 		} finally {
 			
-			close(rs);
 			close(pstmt);
 			
 		}
-		
-		return null;
+		return result;
 	}
 
 }

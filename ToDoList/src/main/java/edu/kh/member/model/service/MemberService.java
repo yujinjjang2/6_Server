@@ -22,4 +22,16 @@ public class MemberService {
 		return member;
 	}
 
+	public int insertMember(String id, String pw, String nm) throws Exception{
+		
+		Connection conn = getConnection();
+		
+		int result = dao.insertMember(conn, id, pw, nm);
+		
+		if(result > 0) commit(conn);
+		else		   rollback(conn);
+		
+		return result;
+	}
+
 }
