@@ -5,9 +5,13 @@
 
 	<entry key="selectTodo">
 		SELECT TODO_NO, TODO_TITLE, TODO_MEMO, 
-		TO_CHAR(TODO_DATE, 'YYYY-MM-DD') TODO_DATE, TODO_DEL_FL
+		TO_CHAR(TODO_DATE, 'YYYY-MM-DD') TODO_DATE, TODO_DEL_FL, MEMBER_NO
 		FROM TODO
 		WHERE MEMBER_NO = ?
+	</entry>
+	
+	<entry key="insertTodo">
+		INSERT INTO TODO VALUES(SEQ_TODO_NO.NEXTVAL, ?, ?, DEFAULT, DEFAULT, ?)
 	</entry>
 	
 </properties>

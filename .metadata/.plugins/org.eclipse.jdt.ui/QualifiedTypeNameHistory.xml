@@ -16,7 +16,6 @@
     <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
     <fullyQualifiedTypeName name="edu.kh.project.member.model.dao.MemberDAO"/>
     <fullyQualifiedTypeName name="edu.kh.project.common.JDBCTemplate"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="edu.kh.project.member.model.dto.Member"/>
     <fullyQualifiedTypeName name="edu.kh.project.member.model.service.MemberService"/>
     <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
@@ -32,8 +31,9 @@
     <fullyQualifiedTypeName name="edu.kh.member.model.dto.Member"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="edu.kh.todo.common.JDBCTemplate"/>
-    <fullyQualifiedTypeName name="edu.kh.todo.model.service.TodoService"/>
     <fullyQualifiedTypeName name="edu.kh.todo.model.dao.TodoDAO"/>
     <fullyQualifiedTypeName name="edu.kh.todo.model.dto.Todo"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="edu.kh.todo.model.service.TodoService"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 </qualifiedTypeNameHistroy>

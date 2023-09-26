@@ -22,4 +22,18 @@ public class TodoService {
 		
 		return todo;
 	}
+
+	public int insertTodo(String title, String memo, int memberNo) throws Exception{
+		 
+		Connection conn = getConnection();
+		
+		int result = dao.insertTodo(conn, title, memo, memberNo);
+		
+		if(result > 0) commit(conn);
+		else			rollback(conn);
+		
+		close(conn);
+		
+		return result;
+	}
 }

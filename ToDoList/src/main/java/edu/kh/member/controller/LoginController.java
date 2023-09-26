@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import edu.kh.member.model.dto.Member;
 import edu.kh.member.model.service.MemberService;
@@ -23,6 +24,10 @@ public class LoginController extends HttpServlet {
 		MemberService service = new MemberService();
 		TodoService service2 = new TodoService();
 		
+		HttpSession session = req.getSession();
+		
+		req.setCharacterEncoding("UTF-8");
+		
 		try {
 			String id = req.getParameter("id");
 			String pw = req.getParameter("pw");
@@ -36,6 +41,8 @@ public class LoginController extends HttpServlet {
 			// 로그인 성공할 경우 todoList 가져오기
 			if(member.size() == 1) {
 				int memNo = member.get(0).getMemberNo();
+				
+				session.setAttribute("memberNo", memNo);
 				
 				List<Todo> todo = service2.selectTodo(memNo);
 				

@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+/* div, section {
+    border: 1px solid black;
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+body > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+}
+
+form > input,
+form > textarea {
+    margin: 10px 0px;
+}
+
+form > textarea {
+    resize: none;
+}
+
+form {
+    font-size: 13px;
+}
+
+#reg-btn {
+    background-color: green;
+    color: white;
+    border: none;
+    width: 80px;
+    height: 30px;
+    margin: 10px 0px;
+}
+
+
+

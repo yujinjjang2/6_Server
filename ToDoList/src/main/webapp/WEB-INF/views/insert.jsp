@@ -4,20 +4,12 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>To do 등록하기</title>
+	<title>To do 등록 성공</title>
 </head>
 <body>
-	<section>
-		<h4>To do 등록하기</h4>
-		
-		<form action="/insert" method="post">
-			제목 <br>
-			<input type="text" name="title"> <br>
-			메모 <br>
-			<textarea></textarea> <br>
-			
-			<button type="submit">등록하기</button>
-		</form>
-	</section>
+	<script>
+		alert("등록되었습니다.");
+		location.href = "/WEB-INF/views/todo.jsp";
+	</script>
 </body>
 </html>
