@@ -61,4 +61,28 @@ public class LoginController extends HttpServlet {
 		req.getRequestDispatcher("/WEB-INF/views/todo.jsp").forward(req, resp);
 		
 	}
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		TodoService service = new TodoService();
+		HttpSession session = req.getSession();
+
+		try {
+			int memNo = (int) session.getAttribute("memberNo");
+			
+			List<Todo> todo = service.selectTodo(memNo);
+			
+			for(Todo td : todo) {
+				System.out.println(td);
+			}
+			
+			req.setAttribute("todo", todo);
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+			
+		}
+		req.getRequestDispatcher("/WEB-INF/views/todo.jsp").forward(req, resp);
+		
+	}
 }

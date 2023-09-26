@@ -9,7 +9,8 @@
 <body>
 	<script>
 		alert("등록되었습니다.");
-		location.href = "/WEB-INF/views/todo.jsp";
+		<!-- location.href = "/WEB-INF/views/todo.jsp"; -->
+		location.href = "/login";
 	</script>
 </body>
 </html>
