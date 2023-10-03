@@ -16,6 +16,17 @@
 	</style>
 
 	<link rel="stylesheet" href="../../resources/css/todo.css">
+	
+	<script type="text/javascript">
+    	function todoUpdate(todoNo) {
+    		location.href = "/todoSelect?todoNo="+todoNo;
+    	}
+
+    	function todoDelete(todoNo) {
+    		location.href = "/todoDelete?todoNo="+todoNo;
+    	}
+	</script>
+	
 </head>
 <body>
 	<section>
@@ -33,15 +44,15 @@
 			
 			<c:forEach var="todo" items="${todo}" varStatus="vs">
 				<tr>
-					<td>${todo.memberTitle}</td>
+					<td>${todo.todoTitle}</td>
 					
 					<td>${todo.todoMemo}</td>
 					
 					<td>${todo.todoDate}</td>
 					
-					<td><button id="update-btn">수정</button></td>
+					<td><button id="update-btn" onclick="todoUpdate(${todo.todoNo})">수정</button></td>
 					
-					<td><button id="delete-btn">삭제</button></td>
+					<td><button id="delete-btn" onclick="todoDelete(${todo.todoNo})">삭제</button></td>
 				</tr>
 			</c:forEach>
 			

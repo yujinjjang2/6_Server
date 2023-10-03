@@ -14,7 +14,7 @@ import lombok.ToString;
 public class Todo {
 
 	private int todoNo;
-	private String memberTitle;
+	private String todoTitle;
 	private String todoMemo;
 	private String todoDate;
 	private String todoDelFl;

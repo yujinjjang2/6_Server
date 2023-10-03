@@ -1,0 +1,45 @@
+/* section, div {
+    border: 1px solid black;
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+body > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 900px;
+}
+
+#title {
+    height: 30px;
+}
+
+#textarea {
+    resize: none;
+}
+
+#sub-btn {
+    width: 100px;
+    height: 40px;
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+#upd-btn {
+	width: 100px;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    border: none;
+}

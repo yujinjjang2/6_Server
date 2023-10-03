@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -83,6 +84,90 @@ public class TodoDAO {
 			pstmt.setString(1, title);
 			pstmt.setString(2, memo);
 			pstmt.setInt(3, memberNo);
+			
+			result = pstmt.executeUpdate();
+			
+		} finally {
+			
+			close(pstmt);
+			
+		}
+		
+		return result;
+	}
+
+	public List<Todo> selectTodoOne(Connection conn, int todoNo) throws SQLException {
+		
+		List<Todo> todo = new ArrayList<Todo>();
+		
+		try {
+			
+			String sql = prop.getProperty("selectTodoOne");
+			
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, todoNo);
+			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				int todoNo1 = rs.getInt("TODO_NO");
+				String todoTitle = rs.getString("TODO_TITLE");
+				String todoMemo = rs.getString("TODO_MEMO");
+				String todoDate = rs.getString("TODO_DATE");
+				String todoDelFl = rs.getString("TODO_DEL_FL");
+				
+				todo.add( new Todo(todoNo1, todoTitle, todoMemo,
+						todoDate, todoDelFl) );
+			}
+			
+			
+		} finally {
+			
+			close(rs);
+			close(pstmt);
+			
+		}
+		
+		return todo;
+	}
+
+	public int updateTodoOne(Connection conn, String title, String memo, int todoNo) throws SQLException {
+
+		int result = 0;
+		
+		try {
+			
+			String sql = prop.getProperty("updateTodoOne");
+			
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, title);
+			pstmt.setString(2, memo);
+			pstmt.setInt(3, todoNo);
+			
+			result = pstmt.executeUpdate();
+			
+		} finally {
+			
+			close(pstmt);
+			
+		}
+		
+		return result;
+	}
+
+	public int deleteTodo(Connection conn, int todoNo) throws SQLException {
+
+		int result = 0;
+		
+		try {
+			
+			String sql = prop.getProperty("deleteTodo");
+			
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, todoNo);
 			
 			result = pstmt.executeUpdate();
 			
